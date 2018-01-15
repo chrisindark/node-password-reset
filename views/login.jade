@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  include messages
+
+  form(id='login-form', method='POST', action='/login')
+    legend Login
+    .form-group
+      label(for='username') Username
+      input.form-control(type='text', id='username', name='username', autofocus)
+    .form-group
+      label(for='password') Password
+      input.form-control(type='password', id='password', name='password')
+    .form-group
+      button.btn.btn-primary(type='submit') Login
+      a.btn.btn-link(href='/forgot') Forgot Password?
+      a.btn.btn-link(href='/register') Or Register

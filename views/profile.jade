@@ -1,0 +1,12 @@
+legend Profile
+
+if user
+  div.alert(class='')
+    ul
+      li #{user._id}
+      li #{user.email}
+      li #{user.username}
+      li #{user.admin}
+      li #{user.createdAt}
+      li #{user.updatedAt}
+    ul

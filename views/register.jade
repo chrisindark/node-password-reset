@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  include messages
+
+  form(id='register-form', method='POST', action='/register' novalidate)
+    legend Register
+    .form-group
+      label(for='display') Display Name
+      input(type='text', name='display', class='form-control',
+        id='display', placeholder='Enter display name',
+        required, data-required-msg='Display Name is required')
+    .form-group
+      label(for='username') Username
+      input(type='text', name='username', class='form-control',
+        id='username', placeholder='Enter username',
+        required, data-required-msg='Username is required')
+    .form-group
+      label(for='password') Password
+      input(type='password', name='password', class='form-control',
+        id='password', placeholder='Enter password',
+        required, data-required-msg='Password is required')
+    .form-group
+      label(for='confirm-password') Confirm Password
+      input(type='password', name='confirm-password', class='form-control',
+      id='confirm-password', placeholder='Confirm password',
+      required, data-required-msg="Please confirm your password")
+    .form-group
+      label(for='email') Email
+      input(type='email', name='email', class='form-control',
+        id='email', placeholder='Enter email',
+        required, data-required-msg='Email is required')
+    .form-group
+      label(for='confirm-email') Confirm Email
+      input(type='email', name='confirm-email', class='form-control',
+      id='confirm-email', placeholder='Confirm email',
+      required, data-required-msg="Please confirm your email")
+    .form-group
+      button.btn.btn-primary(type='submit') Register
+      a.btn.btn-link(href="/login") Or Login

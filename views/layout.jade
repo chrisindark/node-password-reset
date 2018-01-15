@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+
+    .navbar.navbar-inverse.navbar-static-top(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Project name
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='/') Home
+            if user
+              li
+                a(href='/logout') Logout
+            else
+              li
+                a(href='/login') Login
+              li
+                a(href='/register') Register
+
+    .container
+      include flash
+
+      block content
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')

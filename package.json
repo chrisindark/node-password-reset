@@ -1,0 +1,32 @@
+{
+  "name": "node-password-reset",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "debugstart": "DEBUG=node-password-reset:* npm start",
+    "devstart": "DEBUG=node-password-reset:* nodemon ./bin/www"
+  },
+  "dependencies": {
+    "async": "2.5.0",
+    "body-parser": "~1.17.1",
+    "connect-mongo": "1.3.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-flash": "0.0.2",
+    "express-session": "1.15.6",
+    "express-validator": "4.2.1",
+    "jade": "~1.11.0",
+    "mongoose": "4.11.13",
+    "mongoose-unique-validator": "1.0.6",
+    "morgan": "~1.8.1",
+    "nodemailer": "4.1.1",
+    "passport": "0.4.0",
+    "passport-local": "1.0.0",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "1.12.1"
+  }
+}
